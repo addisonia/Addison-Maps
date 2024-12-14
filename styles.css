@@ -203,3 +203,22 @@ body::before {
     border-color: var(--cyan);
     color: var(--dark-purple);
 }
+
+
+.map-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.map-link:hover {
+    color: inherit;
+}
+
+.map-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.map-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 255, 255, 0.3);
+}
