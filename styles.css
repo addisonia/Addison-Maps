@@ -1,0 +1,205 @@
+:root {
+    --dark-purple: #2d1b4e;
+    --cyan: #00ffff;
+}
+
+body {
+    background: linear-gradient(135deg, #000000 25%, var(--dark-purple) 75%);
+    position: relative;
+    color: white;
+}
+
+/* Main background streaks */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 150px,
+        var(--cyan) 150px,
+        var(--cyan) 151px
+    );
+    opacity: 0.1;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.hero-section {
+    height: 60vh;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+                url('/api/placeholder/1200/800') center/cover no-repeat;
+    color: white;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.map-card {
+    transition: transform 0.3s ease;
+    margin-bottom: 30px;
+    background: rgba(45, 27, 78, 0.8);
+    border: 1px solid var(--cyan);
+}
+
+.map-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+}
+
+.map-card .card-body {
+    color: white;
+}
+
+.section-title {
+    color: var(--cyan);
+    text-align: center;
+    margin: 50px 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.section-subtitle {
+    color: white;
+    text-align: center;
+    margin: 30px 0;
+    font-size: 1.5rem;
+    border-bottom: 2px solid var(--cyan);
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+.navbar {
+    background-color: rgba(0, 0, 0, 0.8) !important;
+    backdrop-filter: blur(10px);
+}
+
+.navbar-light .navbar-brand,
+.navbar-light .nav-link {
+    color: white !important;
+}
+
+.navbar-light .nav-link:hover {
+    color: var(--cyan) !important;
+}
+
+/* Section divider */
+.section-divider {
+    height: 150px;
+    background: linear-gradient(to bottom, 
+        rgba(0,0,0,0) 0%,
+        rgba(0,0,0,0.8) 50%,
+        rgba(0,0,0,0) 100%
+    );
+    position: relative;
+    margin: 50px 0;
+    overflow: hidden;
+}
+
+.section-divider::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: var(--cyan);
+    box-shadow: 0 0 10px var(--cyan);
+}
+
+/* About section with wavy lines */
+.about-section {
+    position: relative;
+    background: rgba(0,0,0,0.4);
+    padding: 50px 0;
+    text-align: center;
+}
+
+.wavy-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.1;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.wavy-line {
+    position: absolute;
+    height: 1px;
+    background: var(--cyan);
+    width: 200%;
+    animation: wave 8s infinite linear;
+}
+
+@keyframes wave {
+    0% {
+        transform: translate(-50%, 0) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, 0) rotate(360deg);
+    }
+}
+
+/* Generate multiple wavy lines */
+.wavy-line:nth-child(1) { top: 10%; animation-delay: 0s; }
+.wavy-line:nth-child(2) { top: 30%; animation-delay: -2s; }
+.wavy-line:nth-child(3) { top: 50%; animation-delay: -4s; }
+.wavy-line:nth-child(4) { top: 70%; animation-delay: -6s; }
+.wavy-line:nth-child(5) { top: 90%; animation-delay: -8s; }
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem 0;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+.social-icon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--cyan);
+    border-radius: 50%;
+    color: var(--cyan);
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    background: var(--cyan);
+    color: var(--dark-purple);
+    box-shadow: 0 0 15px var(--cyan);
+    transform: translateY(-5px);
+}
+
+.footer {
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 20px 0;
+    margin-top: 50px;
+    border-top: 1px solid var(--cyan);
+}
+
+.btn-primary {
+    background-color: var(--dark-purple);
+    border-color: var(--cyan);
+}
+
+.btn-primary:hover {
+    background-color: var(--cyan);
+    border-color: var(--cyan);
+    color: var(--dark-purple);
+}
