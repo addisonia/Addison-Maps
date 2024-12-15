@@ -29,3 +29,24 @@ document.querySelectorAll('.map-card img').forEach(img => {
         this.classList.add('loaded');
     });
 });
+
+
+//scrollbutton on home page
+const scrollButton = document.getElementById('scrollButton');
+
+scrollButton.addEventListener('click', function() {
+    document.getElementById('interactive-maps').scrollIntoView({ 
+        behavior: 'smooth' 
+    });
+    // Add fade-out class instead of display: none
+    this.classList.add('fade-out');
+});
+
+// Show/hide button based on scroll position
+window.addEventListener('scroll', function() {
+    if (window.scrollY > 100) {
+        scrollButton.classList.add('fade-out');
+    } else {
+        scrollButton.classList.remove('fade-out');
+    }
+});

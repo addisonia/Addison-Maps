@@ -30,15 +30,57 @@ body::before {
 }
 
 .hero-section {
-    height: 60vh;
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
-                url('/api/placeholder/1200/800') center/cover no-repeat;
+    height: 125vh;
+    min-height: 800px;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7));
     color: white;
     display: flex;
     align-items: center;
     text-align: center;
     position: relative;
 }
+
+.hero-section .container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -200%);
+    width: 100%;
+    padding: 2rem;
+}
+
+.scroll-down-btn {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translate(-50%, -750%);
+    background: transparent;
+    border: 2px solid var(--cyan);
+    color: var(--cyan);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    transition: all 0.3s ease, opacity 0.5s ease;
+}
+
+.scroll-down-btn:hover {
+    background: var(--cyan);
+    color: var(--dark-purple);
+    box-shadow: 0 0 15px var(--cyan);
+}
+
+.scroll-down-btn.fade-out {
+    opacity: 0;
+    pointer-events: none; /* Prevents clicking during fade-out */
+}
+
+
 
 .map-card {
     transition: transform 0.3s ease;
