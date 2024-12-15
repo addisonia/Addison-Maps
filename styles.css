@@ -3,7 +3,38 @@
     --cyan: #00ffff;
 }
 
+@font-face {
+    font-family: 'Tenorite';
+    src: url('../fonts/t_regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Tenorite';
+    src: url('../fonts/t_bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Tenorite';
+    src: url('../fonts/t_italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Tenorite';
+    src: url('../fonts/t_bold_italic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+
+
 body {
+    font-family: 'Tenorite', sans-serif;
     background: linear-gradient(135deg, #000000 25%, var(--dark-purple) 75%);
     position: relative;
     color: white;
@@ -102,8 +133,10 @@ body::before {
     color: var(--cyan);
     text-align: center;
     margin: 50px 0;
-    text-transform: uppercase;
+    text-transform: none;
     letter-spacing: 2px;
+    font-size: 2.5rem;
+    font-weight: bold;
 }
 
 .section-subtitle {
