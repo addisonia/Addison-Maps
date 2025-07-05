@@ -35,7 +35,7 @@ document.querySelectorAll('.map-card img').forEach(img => {
 const scrollButton = document.getElementById('scrollButton');
 
 scrollButton.addEventListener('click', function() {
-    document.getElementById('interactive-maps').scrollIntoView({ 
+    document.getElementById('machine-learning').scrollIntoView({ 
         behavior: 'smooth' 
     });
     // Add fade-out class instead of display: none
