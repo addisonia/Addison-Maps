@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Addison's Maps</title>
-    <!-- Bootstrap CSS -->
+    <!-- bootstrap css -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="styles.css" rel="stylesheet">
 </head>
 
 <body>
-    <!-- Navigation -->
+    <!-- navigation -->
     <nav class="navbar navbar-expand-lg navbar-light sticky-top">
         <div class="container">
             <a class="navbar-brand" href="#home">Home</a>
@@ -20,6 +20,9 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#machine-learning">Machine Learning</a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#interactive-maps">Interactive Maps</a>
                     </li>
@@ -37,7 +40,7 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- hero section -->
     <section class="hero-section" id="home">
         <div class="container">
             <h1 class="display-4">Addison's Maps</h1>
@@ -48,146 +51,139 @@
         </button>
     </section>
 
-    <!-- Interactive Maps Section -->
-    <section class="container py-5" id="interactive-maps">
+    <!-- maps gallery title (moved higher) -->
+    <section class="container py-5" id="maps-gallery">
         <h2 class="section-title">Maps Gallery</h2>
-        <br>
-        <h3 class="section-subtitle">Interactive Maps</h3>
+    </section>
+
+    <!-- machine learning section -->
+    <section class="container py-5" id="machine-learning">
+        <h3 class="section-subtitle">Machine Learning</h3>
         <div class="row">
-            <!-- Wildfire Risk Map -->
+            <!-- predicting severe wildfires story map -->
             <div class="col-md-4 mb-4">
                 <div class="card map-card">
-                    <a href="https://ejburn01.github.io/2024_575FinalProject/" target="_blank" class="map-link">
-                        <img src="images/energy.png" class="card-img-top" alt="Wildfire Risk Map">
+                    <a href="https://arcg.is/1nj9Wb1" target="_blank" class="map-link">
+                        <img src="images/model risk map.png" class="card-img-top" alt="Predicting Severe Wildfires Story Map">
                         <div class="card-body">
-                            <h5 class="card-title">Energy Map</h5>
-                            <p class="card-text">Interactive map of high-voltage transmission line connectivity in
-                                America</p>
+                            <h5 class="card-title">Predicting Severe Wildfires in the Sierra Nevada Range</h5>
+                            <p class="card-text">Lengthy project that used data from Google Earth Engine, Random Forest machine learning models, and Arc GIS tools to build a prediction map for wildfires.</p>
                         </div>
                     </a>
                 </div>
             </div>
-
-            <!-- Walking Tour Map -->
-            <div class="col-md-4 mb-4">
-                <div class="card map-card">
-                    <a href="https://addisonia.github.io/Walking-Tour/" target="_blank" class="map-link">
-                        <img src="images/walking.png" class="card-img-top" alt="Walking Tour Map">
-                        <div class="card-body">
-                            <h5 class="card-title">Music in Madison</h5>
-                            <p class="card-text">Interactive walking tour guide for exploring the music scene in Madison.</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Nevada Stats Map -->
-            <div class="col-md-4 mb-4">
-                <div class="card map-card">
-                    <a href="https://addisonia.github.io/unit-3/" target="_blank" class="map-link">
-                        <img src="images/nevada.png" class="card-img-top" alt="Earthquakes Map">
-                        <div class="card-body">
-                            <h5 class="card-title">Nevada Statistics</h5>
-                            <p class="card-text">Displays income, education, and other metrics per county in the state
-                                of Nevada using the D3 library.</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Macrostrat Fossil Map -->
-            <!-- <div class="col-md-4 mb-4">
-                <div class="card map-card">
-                    <a href="https://addisonia.github.io/Macrostrat-Fossil-Map/" target="_blank" class="map-link">
-                        <img src="images/fossil.png" class="card-img-top" alt="Macrostrat Fossil Map">
-                        <div class="card-body">
-                            <h5 class="card-title">Macrostrat Fossil Map</h5>
-                            <p class="card-text">Simple map displaying fossil locations and geological data in Wisconsin.</p>
-                        </div>
-                    </a>
-                </div>
-            </div> -->
-
         </div>
     </section>
 
-    <!-- General Maps Section -->
+    <!-- interactive maps section -->
+    <section class="container py-5" id="interactive-maps">
+        <h3 class="section-subtitle">Interactive Maps</h3>
+        <div class="row">
+            <!-- energy map -->
+            <div class="col-md-4 mb-4">
+                <div class="card map-card">
+                    <a href="https://ejburn01.github.io/2024_575FinalProject/" target="_blank" class="map-link">
+                        <img src="images/energy.png" class="card-img-top" alt="Energy Map">
+                        <div class="card-body">
+                            <h5 class="card-title">Energy Map</h5>
+                            <p class="card-text">interactive map of high‑voltage transmission line connectivity in america (desktop view only).</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- nevada statistics map -->
+            <div class="col-md-4 mb-4">
+                <div class="card map-card">
+                    <a href="https://addisonia.github.io/unit-3/" target="_blank" class="map-link">
+                        <img src="images/nevada.png" class="card-img-top" alt="Nevada Statistics Map">
+                        <div class="card-body">
+                            <h5 class="card-title">Nevada Statistics</h5>
+                            <p class="card-text">displays income, education, and other metrics per county in nevada using the d3 library.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- general maps section -->
     <section class="container py-5" id="general-maps">
         <h3 class="section-subtitle">General Maps</h3>
         <div class="row">
-            <!-- Africa Map -->
+            <!-- africa map -->
             <div class="col-md-4 mb-4">
                 <div class="card map-card">
                     <a href="general_maps/africa.pdf" target="_blank" class="map-link">
                         <img src="images/africa.png" class="card-img-top" alt="Africa Map">
                         <div class="card-body">
                             <h5 class="card-title">Africa</h5>
-                            <p class="card-text">Physical map of Africa</p>
+                            <p class="card-text">physical map of africa</p>
                         </div>
                     </a>
                 </div>
             </div>
-    
-            <!-- Land Use Map -->
+
+            <!-- land use map -->
             <div class="col-md-4 mb-4">
                 <div class="card map-card">
                     <a href="general_maps/landuse.pdf" target="_blank" class="map-link">
                         <img src="images/landuse.png" class="card-img-top" alt="Land Use Map">
                         <div class="card-body">
                             <h5 class="card-title">Land Use</h5>
-                            <p class="card-text">Land use classification map for potential sites</p>
+                            <p class="card-text">land use classification map for potential sites</p>
                         </div>
                     </a>
                 </div>
             </div>
-    
-            <!-- California Eagles Map -->
+
+            <!-- california eagles map -->
             <div class="col-md-4 mb-4">
                 <div class="card map-card">
                     <a href="general_maps/california_eagles.jpg" target="_blank" class="map-link">
                         <img src="general_maps/california_eagles.jpg" class="card-img-top" alt="California Eagles Map">
                         <div class="card-body">
                             <h5 class="card-title">California Eagles</h5>
-                            <p class="card-text">Eagle distribution across California</p>
+                            <p class="card-text">eagle distribution across california</p>
                         </div>
                     </a>
                 </div>
             </div>
-    
-            <!-- California Lakes Map -->
+
+            <!-- california lakes map -->
             <div class="col-md-4 mb-4">
                 <div class="card map-card">
                     <a href="general_maps/california_lakes.png" target="_blank" class="map-link">
                         <img src="general_maps/california_lakes.png" class="card-img-top" alt="California Lakes Map">
                         <div class="card-body">
                             <h5 class="card-title">California Lakes</h5>
-                            <p class="card-text">Map of the top 7 largest lakes in California</p>
+                            <p class="card-text">map of the top 7 largest lakes in california</p>
                         </div>
                     </a>
                 </div>
             </div>
-    
-            <!-- Korean War Veterans Map -->
+
+            <!-- korean war veterans map -->
             <div class="col-md-4 mb-4">
                 <div class="card map-card">
                     <a href="general_maps/korean_war_veterans.png" target="_blank" class="map-link">
                         <img src="general_maps/korean_war_veterans.png" class="card-img-top" alt="Korean War Veterans Map">
                         <div class="card-body">
                             <h5 class="card-title">Korean War Veterans</h5>
-                            <p class="card-text">Distribution of Korean War veterans in present day</p>
+                            <p class="card-text">distribution of korean war veterans in present day</p>
                         </div>
                     </a>
                 </div>
             </div>
-    
-            <!-- California Map -->
+
+            <!-- california map -->
             <div class="col-md-4 mb-4">
                 <div class="card map-card">
                     <a href="general_maps/california.pdf" target="_blank" class="map-link">
                         <img src="images/california.png" class="card-img-top" alt="California Map">
                         <div class="card-body">
                             <h5 class="card-title">California</h5>
-                            <p class="card-text">General map of California</p>
+                            <p class="card-text">general map of california</p>
                         </div>
                     </a>
                 </div>
@@ -195,58 +191,55 @@
         </div>
     </section>
 
-    <!-- Other Maps Section -->
+    <!-- other maps section -->
     <section class="container py-5" id="other-maps">
-        <h3 class="section-subtitle">Other Maps</h3>
+        <h3 class="section-subtitle">Story Maps</h3>
         <div class="row">
-
-            <!-- Colorado Ghost Towns -->
+            <!-- colorado ghost towns -->
             <div class="col-md-4 mb-4">
                 <div class="card map-card">
                     <a href="https://addisonia.github.io/GEOG572-lab2/" target="_blank" class="map-link">
-                        <img src="images/ghost.png" class="card-img-top" alt="National Parks Map">
+                        <img src="images/ghost.png" class="card-img-top" alt="Colorado Ghost Towns">
                         <div class="card-body">
                             <h5 class="card-title">Colorado Ghost Towns</h5>
-                            <p class="card-text">Spooky Scrollmap....</p>
+                            <p class="card-text">spooky scrollmap....</p>
                         </div>
                     </a>
                 </div>
             </div>
 
-            <!-- Always Ablaze -->
+            <!-- always ablaze -->
             <div class="col-md-4 mb-4">
                 <div class="card map-card">
                     <a href="https://arcg.is/0SOfDy" target="_blank" class="map-link">
-                        <img src="images/ablaze.png" class="card-img-top" alt="Scrolling Story Map">
+                        <img src="images/ablaze.png" class="card-img-top" alt="Always Ablaze Story Map">
                         <div class="card-body">
                             <h5 class="card-title">Always Ablaze</h5>
-                            <p class="card-text">Storymap addressing the growing wildfire crisis in California.</p>
+                            <p class="card-text">story map addressing the growing wildfire crisis in california.</p>
                         </div>
                     </a>
                 </div>
             </div>
 
-            <!-- Eagle Tracker -->
-            <!-- <div class="col-md-4 mb-4">
+            <!-- music in madison map (moved from interactive maps) -->
+            <div class="col-md-4 mb-4">
                 <div class="card map-card">
-                    <a href="https://addisonia.github.io/eagletracker/" target="_blank" class="map-link">
-                        <img src="images/eagle.png" class="card-img-top" alt="Eagle Tracker">
+                    <a href="https://addisonia.github.io/Walking-Tour/" target="_blank" class="map-link">
+                        <img src="images/walking.png" class="card-img-top" alt="Music in Madison Map">
                         <div class="card-body">
-                            <h5 class="card-title">Eagle Tracker</h5>
-                            <p class="card-text">View and add location data regarding eagle spottings.</p>
+                            <h5 class="card-title">Music in Madison</h5>
+                            <p class="card-text">interactive walking tour guide for exploring the music scene in madison.</p>
                         </div>
                     </a>
                 </div>
-            </div> -->
+            </div>
         </div>
     </section>
 
-
-
-    <!-- Section Divider -->
+    <!-- section divider -->
     <div class="section-divider"></div>
 
-    <!-- About Section -->
+    <!-- about section -->
     <section class="about-section" id="about">
         <div class="wavy-background">
             <div class="wavy-line"></div>
@@ -257,43 +250,40 @@
         </div>
         <div class="container">
             <h2 class="section-title">About Me</h2>
-            <!-- Info About Me Section -->
-            <p class="about-info">I am a Master's student at UW Madison studying GIS. I earned a BS in Data Science, GIS, and Physical Geography at UW Madison as well. I love all things relating to geography and am always trying to figure out ways to integrate programming into the many projects I create. </p>
-            <p> Check out my Github and Linkedin below for more of my projects, my Spotify artist page for the music I make, or contact me directly via email. </p>
+            <p class="about-info">I am a Master's student at UW Madison studying GIS. I earned a BS in Data Science, GIS, and Physical Geography at UW Madison as well. I love all things relating to geography and am always trying to figure out ways to integrate programming into the many projects I create.</p>
+            <p>Check out my Github and Linkedin below for more of my projects, my Spotify artist page for the music I make, or contact me directly via email.</p>
             <br>
             <br>
 
-            <!-- Social Icons -->
+            <!-- social icons -->
             <div class="social-icons">
                 <a href="https://github.com/addisonia" class="social-icon" title="GitHub" target="_blank">
                     <i class="fab fa-github fa-lg"></i>
                 </a>
-                <a href="https://www.linkedin.com/in/addison-atkin/" class="social-icon" title="LinkedIn"
-                    target="_blank">
+                <a href="https://www.linkedin.com/in/addison-atkin/" class="social-icon" title="LinkedIn" target="_blank">
                     <i class="fab fa-linkedin fa-lg"></i>
                 </a>
                 <a href="mailto:addisonathome@gmail.com" class="social-icon" title="Email">
                     <i class="fas fa-envelope fa-lg"></i>
                 </a>
-                <a href="https://open.spotify.com/artist/3neBuQSxiRkVMpo51BKeep?si=--pHYXzKSbm7hXLvAGesKA"
-                    class="social-icon" title="YouTube Music" target="_blank">
+                <a href="https://open.spotify.com/artist/3neBuQSxiRkVMpo51BKeep?si=--pHYXzKSbm7hXLvAGesKA" class="social-icon" title="Spotify" target="_blank">
                     <i class="fas fa-music fa-lg"></i>
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- footer -->
     <footer class="footer">
         <div class="container text-center">
             <p><i>"All my designs simplified"</i> - Porcupine Tree</p>
         </div>
     </footer>
 
-    <!-- Font Awesome for social icons -->
+    <!-- font awesome for social icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-    <!-- Bootstrap JS -->
+    <!-- bootstrap js -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
