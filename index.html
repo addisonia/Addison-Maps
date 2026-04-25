@@ -1,296 +1,501 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Addison's Maps</title>
-    <!-- bootstrap css -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="styles.css" rel="stylesheet">
-</head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link href="styles.css" rel="stylesheet" />
+  </head>
 
-<body>
-    <!-- navigation -->
+  <body>
     <nav class="navbar navbar-expand-lg navbar-light sticky-top">
-        <div class="container">
-            <a class="navbar-brand" href="#home">Home</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#machine-learning">Machine Learning</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#interactive-maps">Interactive Maps</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#general-maps">General Maps</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#other-maps">Other Maps</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
-                    </li>
-                </ul>
-            </div>
+      <div class="container">
+        <a class="navbar-brand" href="#home">Home</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#fullstack-applications"
+                >Fullstack Applications</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#machine-learning">Machine Learning</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#interactive-maps">Interactive Maps</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#general-maps">General Maps</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#other-maps">Other Maps</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+          </ul>
         </div>
+      </div>
     </nav>
 
-    <!-- hero section -->
-    <section class="hero-section" id="home">
-        <div class="container">
-            <h1 class="display-4">Addison's Maps</h1>
-            <p class="lead">Check Out My Maps!</p>
-        </div>
-        <button id="scrollButton" class="scroll-down-btn">
-            <i class="fas fa-chevron-down"></i>
-        </button>
+    <section
+      class="hero-section"
+      id="home"
+      style="
+        background: linear-gradient(to bottom, #2b2b36 0%, transparent 100%);
+      "
+    >
+      <div class="container text-center">
+        <h1 class="display-4">Addison's Maps</h1>
+        <p class="lead mx-auto" style="max-width: 700px">
+          All my GIS related projects ranging from fullstack dashboards, to
+          predictive mapping, to stylized map artworks!
+        </p>
+      </div>
+      <button
+        class="scroll-down-btn"
+        onclick="
+          document
+            .getElementById('fullstack-applications')
+            .scrollIntoView({ behavior: 'smooth' })
+        "
+      >
+        <i class="fas fa-chevron-down"></i>
+      </button>
     </section>
 
-    <!-- maps gallery title -->
     <section class="container py-5" id="maps-gallery">
-        <h2 class="section-title">Maps Gallery</h2>
+      <h2 class="section-title">Maps Gallery</h2>
     </section>
 
-    <!-- machine learning section -->
+    <section class="container py-5" id="fullstack-applications">
+      <h3 class="section-subtitle">Fullstack Applications</h3>
+      <div class="row">
+        <div class="col-md-8 mb-4">
+          <div class="card map-card">
+            <a
+              href="https://drive.google.com/file/d/1sUmJKSB2CrrLjxGJulqaDCoXlxhXX0Fh/view?usp=sharing"
+              target="_blank"
+              class="map-link"
+            >
+              <img
+                src="images/snowplow.png"
+                class="card-img-top"
+                alt="Snowplow Tracker Dashboard Preview"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Snowplow Tracker Dashboard</h5>
+                <p class="card-text">
+                  Video demonstration of the Snowplow Tracker Dashboard. This
+                  dashboard is a custom built Web GIS application designed to
+                  provide affordable, real-time, and historical GPS tracking for
+                  heavy machinery in extreme winter environments. It features a
+                  highly interactive interface where users can monitor live and
+                  past vehicle movements, visualize road clearance recency or
+                  vehicle speeds. The backend runs on a secure, multi-tiered
+                  architecture which includes a Linux VPS to handle raw hardware
+                  telemetry, Firebase for real-time data, BigQuery for
+                  economical long-term storage, custom Python APIs, a
+                  self-hosted Valhalla route-matching engine, and strict
+                  cybersecurity practices using Google Auth for user logins (and
+                  more!).
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <div class="card map-card">
+            <a
+              href="https://drive.google.com/file/d/1C58d1xSRmApQWldSq_IXp6hpwp_xreXb/view"
+              target="_blank"
+              class="map-link"
+            >
+              <img
+                src="images/snowspotter.png"
+                class="card-img-top"
+                alt="SnowSpotter Android App Preview"
+                style="
+                  max-height: 450px;
+                  object-fit: cover;
+                  object-position: top;
+                "
+              />
+              <div class="card-body">
+                <h5 class="card-title">SnowSpotter Android App</h5>
+                <p class="card-text">
+                  Video demonstration of the SnowSpotter Android Application.
+                  This is an android app that shows all locations in North
+                  America that are currenty snowing. Users can sign in to load
+                  their saved UI preferences. App music is made by me.
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="container py-5" id="machine-learning">
-        <h3 class="section-subtitle">Machine Learning</h3>
-        <div class="row">
-            
-            <!-- predicting severe wildfires story map -->
-            <div class="col-md-4 mb-4">
-                <div class="card map-card">
-                    <a href="https://arcg.is/1nj9Wb1" target="_blank" class="map-link">
-                        <img src="images/model risk map.png" class="card-img-top" alt="Predicting Severe Wildfires Story Map">
-                        <div class="card-body">
-                            <h5 class="card-title">Predicting Severe Wildfires in the Sierra Nevada Range</h5>
-                            <p class="card-text">Lengthy Project That Used Data From Google Earth Engine, Random Forest Machine Learning Models, And Arc GIS Tools To Build A Prediction Map For Wildfires.</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-
-            
-            <!-- Land Surface Temperature Geographic Weighted Regression -->
-            <div class="col-md-4 mb-4">
-                <div class="card map-card">
-                    <a href="https://drive.google.com/file/d/1xJhddChPo9xpYFKciVpxe-LgiztvjLXb/view?usp=sharing" target="_blank" class="map-link">
-                        <img src="images/GWR_LST.png" class="card-img-top" alt="LST GWR">
-                        <div class="card-body">
-                            <h5 class="card-title">Land Surface Temperature Geographic Weighted Regression</h5>
-                            <p class="card-text">Analyzing The Relationship Between Land Surface Temperature And Social Vulnerability In Madison, Wisconsin.</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            
+      <h3 class="section-subtitle">Machine Learning</h3>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card map-card">
+            <a href="https://arcg.is/1nj9Wb1" target="_blank" class="map-link">
+              <img
+                src="images/model risk map.png"
+                class="card-img-top"
+                alt="Predicting Severe Wildfires Story Map"
+              />
+              <div class="card-body">
+                <h5 class="card-title">
+                  Predicting Severe Wildfires in the Sierra Nevada Range
+                </h5>
+                <p class="card-text">
+                  Lengthy Project That Used Data From Google Earth Engine,
+                  Random Forest Machine Learning Models, And Arc GIS Tools To
+                  Build A Prediction Map For Wildfires.
+                </p>
+              </div>
+            </a>
+          </div>
         </div>
+
+        <div class="col-md-4 mb-4">
+          <div class="card map-card">
+            <a
+              href="https://drive.google.com/file/d/1xJhddChPo9xpYFKciVpxe-LgiztvjLXb/view?usp=sharing"
+              target="_blank"
+              class="map-link"
+            >
+              <img
+                src="images/GWR_LST.png"
+                class="card-img-top"
+                alt="LST GWR"
+              />
+              <div class="card-body">
+                <h5 class="card-title">
+                  Land Surface Temperature Geographic Weighted Regression
+                </h5>
+                <p class="card-text">
+                  Analyzing The Relationship Between Land Surface Temperature
+                  And Social Vulnerability In Madison, Wisconsin.
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- interactive maps section -->
     <section class="container py-5" id="interactive-maps">
-        <h3 class="section-subtitle">Interactive Maps</h3>
-        <div class="row">
-            <!-- energy map -->
-            <div class="col-md-4 mb-4">
-                <div class="card map-card">
-                    <a href="https://ejburn01.github.io/2024_575FinalProject/" target="_blank" class="map-link">
-                        <img src="images/energy.png" class="card-img-top" alt="Energy Map">
-                        <div class="card-body">
-                            <h5 class="card-title">Energy Map</h5>
-                            <p class="card-text">Interactive Map of High‑Voltage Transmission Line Connectivity In America (desktop view only).</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-
-            <!-- nevada statistics map -->
-            <div class="col-md-4 mb-4">
-                <div class="card map-card">
-                    <a href="https://addisonia.github.io/unit-3/" target="_blank" class="map-link">
-                        <img src="images/nevada.png" class="card-img-top" alt="Nevada Statistics Map">
-                        <div class="card-body">
-                            <h5 class="card-title">Nevada Statistics</h5>
-                            <p class="card-text">Displays Income, Education, And Other Metrics Per County In Nevada Using The d3 Library.</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
+      <h3 class="section-subtitle">Interactive Maps</h3>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card map-card">
+            <a
+              href="https://ejburn01.github.io/2024_575FinalProject/"
+              target="_blank"
+              class="map-link"
+            >
+              <img
+                src="images/energy.png"
+                class="card-img-top"
+                alt="Energy Map"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Energy Map</h5>
+                <p class="card-text">
+                  Interactive Map of High‑Voltage Transmission Line Connectivity
+                  In America (desktop view only).
+                </p>
+              </div>
+            </a>
+          </div>
         </div>
+
+        <div class="col-md-4 mb-4">
+          <div class="card map-card">
+            <a
+              href="https://addisonia.github.io/unit-3/"
+              target="_blank"
+              class="map-link"
+            >
+              <img
+                src="images/nevada.png"
+                class="card-img-top"
+                alt="Nevada Statistics Map"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Nevada Statistics</h5>
+                <p class="card-text">
+                  Displays Income, Education, And Other Metrics Per County In
+                  Nevada Using The d3 Library.
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- general maps section -->
     <section class="container py-5" id="general-maps">
-        <h3 class="section-subtitle">General Maps</h3>
-        <div class="row">
-            <!-- africa map -->
-            <div class="col-md-4 mb-4">
-                <div class="card map-card">
-                    <a href="general_maps/africa.pdf" target="_blank" class="map-link">
-                        <img src="images/africa.png" class="card-img-top" alt="Africa Map">
-                        <div class="card-body">
-                            <h5 class="card-title">Africa</h5>
-                            <p class="card-text">Physical Map Of Africa</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-
-            <!-- land use map -->
-            <div class="col-md-4 mb-4">
-                <div class="card map-card">
-                    <a href="general_maps/landuse.pdf" target="_blank" class="map-link">
-                        <img src="images/landuse.png" class="card-img-top" alt="Land Use Map">
-                        <div class="card-body">
-                            <h5 class="card-title">Land Use</h5>
-                            <p class="card-text">Land Use Classification Map For Potential Sites</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-
-            <!-- california eagles map -->
-            <div class="col-md-4 mb-4">
-                <div class="card map-card">
-                    <a href="general_maps/california_eagles.jpg" target="_blank" class="map-link">
-                        <img src="general_maps/california_eagles.jpg" class="card-img-top" alt="California Eagles Map">
-                        <div class="card-body">
-                            <h5 class="card-title">California Eagles</h5>
-                            <p class="card-text">Eagle Distribution Across California</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-
-            <!-- california lakes map -->
-            <div class="col-md-4 mb-4">
-                <div class="card map-card">
-                    <a href="general_maps/california_lakes.png" target="_blank" class="map-link">
-                        <img src="general_maps/california_lakes.png" class="card-img-top" alt="California Lakes Map">
-                        <div class="card-body">
-                            <h5 class="card-title">California Lakes</h5>
-                            <p class="card-text">Map Of The Top 7 Largest Lakes In California</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-
-            <!-- korean war veterans map -->
-            <div class="col-md-4 mb-4">
-                <div class="card map-card">
-                    <a href="general_maps/korean_war_veterans.png" target="_blank" class="map-link">
-                        <img src="general_maps/korean_war_veterans.png" class="card-img-top" alt="Korean War Veterans Map">
-                        <div class="card-body">
-                            <h5 class="card-title">Korean War Veterans</h5>
-                            <p class="card-text">Distribution Of Korean War Veterans In Present Day</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-
-            <!-- california map -->
-            <div class="col-md-4 mb-4">
-                <div class="card map-card">
-                    <a href="general_maps/california.pdf" target="_blank" class="map-link">
-                        <img src="images/california.png" class="card-img-top" alt="California Map">
-                        <div class="card-body">
-                            <h5 class="card-title">California</h5>
-                            <p class="card-text">General Map Of California</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
+      <h3 class="section-subtitle">General Maps</h3>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card map-card">
+            <a href="general_maps/africa.pdf" target="_blank" class="map-link">
+              <img
+                src="images/africa.png"
+                class="card-img-top"
+                alt="Africa Map"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Africa</h5>
+                <p class="card-text">Physical Map Of Africa</p>
+              </div>
+            </a>
+          </div>
         </div>
+
+        <div class="col-md-4 mb-4">
+          <div class="card map-card">
+            <a href="general_maps/landuse.pdf" target="_blank" class="map-link">
+              <img
+                src="images/landuse.png"
+                class="card-img-top"
+                alt="Land Use Map"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Land Use</h5>
+                <p class="card-text">
+                  Land Use Classification Map For Potential Sites
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <div class="card map-card">
+            <a
+              href="general_maps/california_eagles.jpg"
+              target="_blank"
+              class="map-link"
+            >
+              <img
+                src="general_maps/california_eagles.jpg"
+                class="card-img-top"
+                alt="California Eagles Map"
+              />
+              <div class="card-body">
+                <h5 class="card-title">California Eagles</h5>
+                <p class="card-text">Eagle Distribution Across California</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <div class="card map-card">
+            <a
+              href="general_maps/california_lakes.png"
+              target="_blank"
+              class="map-link"
+            >
+              <img
+                src="general_maps/california_lakes.png"
+                class="card-img-top"
+                alt="California Lakes Map"
+              />
+              <div class="card-body">
+                <h5 class="card-title">California Lakes</h5>
+                <p class="card-text">
+                  Map Of The Top 7 Largest Lakes In California
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <div class="card map-card">
+            <a
+              href="general_maps/korean_war_veterans.png"
+              target="_blank"
+              class="map-link"
+            >
+              <img
+                src="general_maps/korean_war_veterans.png"
+                class="card-img-top"
+                alt="Korean War Veterans Map"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Korean War Veterans</h5>
+                <p class="card-text">
+                  Distribution Of Korean War Veterans In Present Day
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <div class="card map-card">
+            <a
+              href="general_maps/california.pdf"
+              target="_blank"
+              class="map-link"
+            >
+              <img
+                src="images/california.png"
+                class="card-img-top"
+                alt="California Map"
+              />
+              <div class="card-body">
+                <h5 class="card-title">California</h5>
+                <p class="card-text">General Map Of California</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- other maps section -->
     <section class="container py-5" id="other-maps">
-        <h3 class="section-subtitle">Other Maps/Projects</h3>
-        <div class="row">
-            
-            <!-- colorado ghost towns -->
-            <div class="col-md-4 mb-4">
-                <div class="card map-card">
-                    <a href="https://addisonia.github.io/GEOG572-lab2/" target="_blank" class="map-link">
-                        <img src="images/ghost.png" class="card-img-top" alt="Colorado Ghost Towns">
-                        <div class="card-body">
-                            <h5 class="card-title">Colorado Ghost Towns</h5>
-                            <p class="card-text">Spooky Scrollmap....</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-
-            <!-- always ablaze -->
-            <div class="col-md-4 mb-4">
-                <div class="card map-card">
-                    <a href="https://arcg.is/0SOfDy" target="_blank" class="map-link">
-                        <img src="images/ablaze.png" class="card-img-top" alt="Always Ablaze Story Map">
-                        <div class="card-body">
-                            <h5 class="card-title">Always Ablaze</h5>
-                            <p class="card-text">Story Map Addressing The Growing Wildfire Crisis In California.</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-
+      <h3 class="section-subtitle">Other Maps/Projects</h3>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card map-card">
+            <a
+              href="https://addisonia.github.io/GEOG572-lab2/"
+              target="_blank"
+              class="map-link"
+            >
+              <img
+                src="images/ghost.png"
+                class="card-img-top"
+                alt="Colorado Ghost Towns"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Colorado Ghost Towns</h5>
+                <p class="card-text">Spooky Scrollmap....</p>
+              </div>
+            </a>
+          </div>
         </div>
+
+        <div class="col-md-4 mb-4">
+          <div class="card map-card">
+            <a href="https://arcg.is/0SOfDy" target="_blank" class="map-link">
+              <img
+                src="images/ablaze.png"
+                class="card-img-top"
+                alt="Always Ablaze Story Map"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Always Ablaze</h5>
+                <p class="card-text">
+                  Story Map Addressing The Growing Wildfire Crisis In
+                  California.
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- section divider -->
     <div class="section-divider"></div>
 
-    <!-- about section -->
     <section class="about-section" id="about">
-        <div class="wavy-background">
-            <div class="wavy-line"></div>
-            <div class="wavy-line"></div>
-            <div class="wavy-line"></div>
-            <div class="wavy-line"></div>
-            <div class="wavy-line"></div>
-        </div>
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <p class="about-info">I am a Master's student at UW Madison studying GIS. I earned a BS in Data Science, GIS, and Physical Geography at UW Madison as well. I love all things relating to geography and am always trying to figure out ways to integrate programming into the many projects I create.</p>
-            <p>Check out my Github and Linkedin below for more of my projects, my Spotify artist page for the music I make, or contact me directly via email.</p>
-            <br>
-            <br>
+      <div class="wavy-background">
+        <div class="wavy-line"></div>
+        <div class="wavy-line"></div>
+        <div class="wavy-line"></div>
+        <div class="wavy-line"></div>
+        <div class="wavy-line"></div>
+      </div>
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <p class="about-info">
+          I am a Master's student at UW Madison studying GIS. I earned a BS in
+          Data Science, GIS, and Physical Geography at UW Madison as well. I
+          love all things relating to geography and am always trying to figure
+          out ways to integrate programming into the many projects I create.
+        </p>
+        <p>
+          Check out my Github and Linkedin below for more of my projects, my
+          Spotify artist page for the music I make, or contact me directly via
+          email.
+        </p>
+        <br />
+        <br />
 
-            <!-- social icons -->
-            <div class="social-icons">
-                <a href="https://github.com/addisonia" class="social-icon" title="GitHub" target="_blank">
-                    <i class="fab fa-github fa-lg"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/addison-atkin/" class="social-icon" title="LinkedIn" target="_blank">
-                    <i class="fab fa-linkedin fa-lg"></i>
-                </a>
-                <a href="mailto:addisonathome@gmail.com" class="social-icon" title="Email">
-                    <i class="fas fa-envelope fa-lg"></i>
-                </a>
-                <a href="https://open.spotify.com/artist/3neBuQSxiRkVMpo51BKeep?si=--pHYXzKSbm7hXLvAGesKA" class="social-icon" title="Spotify" target="_blank">
-                    <i class="fas fa-music fa-lg"></i>
-                </a>
-            </div>
+        <div class="social-icons">
+          <a
+            href="https://github.com/addisonia"
+            class="social-icon"
+            title="GitHub"
+            target="_blank"
+          >
+            <i class="fab fa-github fa-lg"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/addison-atkin/"
+            class="social-icon"
+            title="LinkedIn"
+            target="_blank"
+          >
+            <i class="fab fa-linkedin fa-lg"></i>
+          </a>
+          <a
+            href="mailto:addisonathome@gmail.com"
+            class="social-icon"
+            title="Email"
+          >
+            <i class="fas fa-envelope fa-lg"></i>
+          </a>
+          <a
+            href="https://open.spotify.com/artist/3neBuQSxiRkVMpo51BKeep?si=--pHYXzKSbm7hXLvAGesKA"
+            class="social-icon"
+            title="Spotify"
+            target="_blank"
+          >
+            <i class="fas fa-music fa-lg"></i>
+          </a>
         </div>
+      </div>
     </section>
 
-    <!-- footer -->
     <footer class="footer">
-        <div class="container text-center">
-            <p><i>"Nothing ever happens if you don't make it happen"</i> - Porcupine Tree</p>
-        </div>
+      <div class="container text-center">
+        <p>
+          <i>"Nothing ever happens if you don't make it happen"</i> - Porcupine
+          Tree
+        </p>
+      </div>
     </footer>
 
-    <!-- font awesome for social icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
 
-    <!-- bootstrap js -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
-</body>
-
+  </body>
 </html>
